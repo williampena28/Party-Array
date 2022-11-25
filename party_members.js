@@ -158,4 +158,21 @@ party.forEach((el) =>
     }
 })
 
+//Prompt 10: Timothy's sword has gotten old. 
+//Change it to "Rusty Sword"
+party.forEach((el) =>
+{
+    if(el.name == "Timothy")
+    {
+        for(var i = 0; i < el.belongings.length; i++) //for loop to find the index of the sword to change it
+        {
+            if(el.belongings[i] == "sword")
+            {
+                el.belongings[i] = "Rusty Sword";
+                break;
+            }
+        }
+    }
+})
+
 console.log(party);
