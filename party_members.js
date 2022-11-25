@@ -108,6 +108,23 @@ const leaveParty = (member) =>
         }
     }
 }
-leaveParty("Joline");
+leaveParty("Joline"); //splices "Joline" from the party array
+
+const addMember = (member) =>
+{
+    party.push( //pushing the new member into the party array
+        {
+            name: member,
+            hitpoints: 10,
+            belongings: ["potion", "sword", "shield"],
+            companion: 
+            {
+                name: "doug",
+                type: "canine"
+            }
+        }
+    )
+}
+addMember("new member");
 
 console.log(party);
