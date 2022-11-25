@@ -147,4 +147,15 @@ const splitGold = (amount) =>
 }
 splitGold(200);
 
+//Prompt 9: Sarah is tired of taking care of a jellyfish.
+//Subtract some gold from her and change her companion to a bear
+party.forEach((el) =>
+{
+    if(el.name == "Sarah")
+    {
+        el.companion.type = "bear"
+        el.gold -= 30;
+    }
+})
+
 console.log(party);
