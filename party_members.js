@@ -55,4 +55,21 @@ party.forEach((el) =>
     }
 })
 
+//Prompt 4: Timothy drank this potion. Raise his hitpoints by 20 and remove "potion" from his belongings.
+party.forEach((el) =>
+{
+    if(el.name == "Timothy")
+    {
+        el.hitpoints += 20;
+        for(var i = 0; i < el.belongings.length; i++)
+        {
+            if(el.belongings[i] == "potion")
+            {
+                el.belongings.splice(i, 1);
+                break;
+            }
+        }
+    }
+})
+
 console.log(party);
