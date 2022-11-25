@@ -10,7 +10,7 @@ let party = [
     },
     {
         name: "Joline",
-        hitpoitns: 15,
+        hitpoints: 15,
         belongings: ["spear", "bread", "Tums"],
         companion: {
             name: "Tabby",
@@ -19,7 +19,7 @@ let party = [
     },
     {
         name: "Sarah",
-        hitpoitns: 20,
+        hitpoints: 20,
         belongings: ["bow", "arrows", "wood"],
         companion: {
             name: "Tony",
@@ -28,3 +28,7 @@ let party = [
     },
 ]
 
+//Prompt 1: double the hitpoints of everyone in the party
+party.forEach((el) => { //iterate through each element in the party array
+    el.hitpoints = 2 * el.hitpoints; // double that elements hitpoints
+})
