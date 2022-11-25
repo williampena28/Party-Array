@@ -46,4 +46,13 @@ party.forEach((el) =>
     }
 })
 
+//Prompt 3: Sarah's tiger has been turned into a jellyfish by a wizard, please change it
+party.forEach((el) =>
+{
+    if(el.name == "Sarah")
+    {
+        el.companion.type = "jellyfish";
+    }
+})
+
 console.log(party);
