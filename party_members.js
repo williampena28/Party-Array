@@ -3,7 +3,8 @@ let party = [
         name: "Timothy",
         hitpoints: 10,
         belongings: ["sword", "potion", "Tums"],
-        companion: {
+        companion: 
+        {
             name: "Velma",
             type: "bat",
         }
@@ -12,7 +13,8 @@ let party = [
         name: "Joline",
         hitpoints: 15,
         belongings: ["spear", "bread", "Tums"],
-        companion: {
+        companion: 
+        {
             name: "Tabby",
             type: "cat",
         }
@@ -21,7 +23,8 @@ let party = [
         name: "Sarah",
         hitpoints: 20,
         belongings: ["bow", "arrows", "wood"],
-        companion: {
+        companion: 
+        {
             name: "Tony",
             type: "tiger",
         }
@@ -29,6 +32,18 @@ let party = [
 ]
 
 //Prompt 1: double the hitpoints of everyone in the party
-party.forEach((el) => { //iterate through each element in the party array
+party.forEach((el) => 
+{ //iterate through each element in the party array
     el.hitpoints = 2 * el.hitpoints; // double that elements hitpoints
 })
+
+//Prompt 2: Timothy has been hit with an arrow, subtract 5 points from his hp
+party.forEach((el) => 
+{
+    if(el.name == "Timothy")
+    {
+        el.hitpoints -= el.hitpoints;
+    }
+})
+
+console.log(party);
