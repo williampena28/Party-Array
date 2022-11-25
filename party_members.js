@@ -72,4 +72,24 @@ party.forEach((el) =>
     }
 })
 
+//Prompt 5: Timothy got hungry and stole Joline's bread.
+//Take it out of her belongings and put it into Timothy's belongings.
+party.forEach((el) =>
+{
+    if(el.name == "Timothy")
+    {
+        el.belongings.push("bread");
+    } else if (el.name == "Joline")
+    {
+        for(var i = 0; i < el.belongings.length; i++)
+        {
+            if(el.belongings[i] == "bread")
+            {
+                el.belongings.splice(i, 1);
+                break;
+            }
+        }
+    }
+})
+
 console.log(party);
