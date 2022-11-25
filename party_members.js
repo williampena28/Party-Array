@@ -1,3 +1,5 @@
+//William Peña
+
 let party = [
     {
         name: "Timothy",
