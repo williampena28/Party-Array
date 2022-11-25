@@ -92,4 +92,22 @@ party.forEach((el) =>
     }
 })
 
+//Prompt 6: Joline got upset and left the party.
+//Take her out of the array.
+
+const leaveParty = (member) =>
+{
+    //here I use a for loop instead of forEach since we need the index of
+    //the member that is leaving for proper use of the splice() method
+    for(var i = 0; i < party.length; i++)
+    {
+        if(party[i].name == member)
+        {
+            party.splice(i, 1);
+            break;
+        }
+    }
+}
+leaveParty("Joline");
+
 console.log(party);
