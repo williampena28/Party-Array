@@ -8,7 +8,8 @@ let party = [
             name: "Velma",
             type: "bat"
         },
-        gold: 0
+        gold: 0,
+        leader: false
     },
     {
         name: "Joline",
@@ -19,7 +20,8 @@ let party = [
             name: "Tabby",
             type: "cat"
         },
-        gold: 0
+        gold: 0,
+        leader: false
     },
     {
         name: "Sarah",
@@ -30,7 +32,8 @@ let party = [
             name: "Tony",
             type: "tiger"
         },
-        gold: 0
+        gold: 0,
+        leader: false
     },
 ]
 
@@ -127,7 +130,8 @@ const addMember = (member) =>
                 name: "doug",
                 type: "canine"
             },
-            gold: 0
+            gold: 0,
+            leader: false
         }
     )
 }
@@ -174,5 +178,27 @@ party.forEach((el) =>
         }
     }
 })
+
+//Prompt 11: Write a function called setLeader that takes a name as a parameter.
+//The member with that name should have a new property leader: true
+//while other members have leader: false.
+const setLeader = (member) =>
+{
+    party.forEach((el) =>
+    {
+        if(el.name == member && el.leader == false)
+        {
+            el.leader = true;
+            console.log(`${member} is now the party leader!`)
+        } else if (el.name == member && el.leader == true)
+        {
+            console.log(`${member} is already party leader`);
+        } else if (el.name != member && el.leader == true)
+        {
+            el.leader = false;
+        }
+    })
+}
+setLeader("Timothy")
 
 console.log(party);
