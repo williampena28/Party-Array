@@ -6,8 +6,9 @@ let party = [
         companion: 
         {
             name: "Velma",
-            type: "bat",
-        }
+            type: "bat"
+        },
+        gold: 0
     },
     {
         name: "Joline",
@@ -16,8 +17,9 @@ let party = [
         companion: 
         {
             name: "Tabby",
-            type: "cat",
-        }
+            type: "cat"
+        },
+        gold: 0
     },
     {
         name: "Sarah",
@@ -26,8 +28,9 @@ let party = [
         companion: 
         {
             name: "Tony",
-            type: "tiger",
-        }
+            type: "tiger"
+        },
+        gold: 0
     },
 ]
 
@@ -110,6 +113,8 @@ const leaveParty = (member) =>
 }
 leaveParty("Joline"); //splices "Joline" from the party array
 
+//Prompt 7: Timothy and Sarah have been recruiting.
+//Add a new adventurer to the party.
 const addMember = (member) =>
 {
     party.push( //pushing the new member into the party array
@@ -121,10 +126,25 @@ const addMember = (member) =>
             {
                 name: "doug",
                 type: "canine"
-            }
+            },
+            gold: 0
         }
     )
 }
 addMember("new member");
+
+//Prompt 8: The party has been doing well! They found 200 gold.
+//Create a new property called gold and split the gold evenly between everyone.
+const splitGold = (amount) =>
+{
+    party.forEach((el) =>
+    {
+        //toFixed method used to round up the split amount by 2 decimals
+        //parseFloat method used to convert the toFixed amount to a float instead of str
+        split = amount / party.length;
+        el.gold += parseFloat(split.toFixed(2));
+    })
+}
+splitGold(200);
 
 console.log(party);
